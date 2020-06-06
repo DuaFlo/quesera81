@@ -1,0 +1,15 @@
+------------>Iniciar sesión (solo una vez)
+
+git config --global user.name "NOMBRE"
+git config --global user.email "CORREO@gmail.com"
+
+-------------> Subir cambios
+
+git status
+git add .
+git commit -m "MENSAJE"
+git push origin master
+
+------------> Bajar cambios
+
+git pull
