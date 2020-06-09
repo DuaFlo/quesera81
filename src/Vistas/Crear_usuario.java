@@ -39,7 +39,7 @@ public class Crear_usuario extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         btn_registro = new javax.swing.JButton();
         txt_cc = new javax.swing.JTextField();
-        txt_name = new javax.swing.JTextField();
+        txt_nom = new javax.swing.JTextField();
         txt_usuario = new javax.swing.JTextField();
         txt_pass = new javax.swing.JPasswordField();
         txt_pass2 = new javax.swing.JPasswordField();
@@ -98,7 +98,7 @@ public class Crear_usuario extends javax.swing.JFrame {
                         .addGap(66, 66, 66)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_cc, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_pass, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_pass2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -135,7 +135,7 @@ public class Crear_usuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addGap(2, 2, 2)
-                .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -231,7 +231,7 @@ public class Crear_usuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField txt_cc;
-    private javax.swing.JTextField txt_name;
+    private javax.swing.JTextField txt_nom;
     private javax.swing.JPasswordField txt_pass;
     private javax.swing.JPasswordField txt_pass2;
     private javax.swing.JTextField txt_usuario;
