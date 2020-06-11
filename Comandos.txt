@@ -13,3 +13,9 @@ git push origin master
 ------------> Bajar cambios
 
 git pull
+
+-----------> Cuando hayan errores
+
+ reset --hard master
+ git fetch
+ git pull
