@@ -44,6 +44,7 @@ public class Crear_usuario extends javax.swing.JFrame {
         txt_pass = new javax.swing.JPasswordField();
         txt_pass2 = new javax.swing.JPasswordField();
         cb_tipo = new javax.swing.JComboBox<>();
+        btn_volver = new javax.swing.JButton();
 
         jTextField5.setText("jTextField5");
 
@@ -157,18 +158,31 @@ public class Crear_usuario extends javax.swing.JFrame {
                 .addGap(32, 32, 32))
         );
 
+        btn_volver.setText("VOLVER");
+        btn_volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_volverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
+                .addContainerGap()
+                .addComponent(btn_volver)
+                .addGap(26, 26, 26)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_volver)
+                .addContainerGap())
         );
 
         pack();
@@ -181,6 +195,12 @@ public class Crear_usuario extends javax.swing.JFrame {
     private void txt_ccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ccActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_ccActionPerformed
+
+    private void btn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverActionPerformed
+        Menu_principal menu = new Menu_principal();
+        menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_volverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,6 +239,7 @@ public class Crear_usuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_registro;
+    private javax.swing.JButton btn_volver;
     private javax.swing.JComboBox<String> cb_tipo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

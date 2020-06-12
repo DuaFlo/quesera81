@@ -28,30 +28,288 @@ public class Menu_principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        btn_editusu = new javax.swing.JButton();
+        btn_crearusu = new javax.swing.JButton();
+        btn_crearpr = new javax.swing.JButton();
+        btn_editpr = new javax.swing.JButton();
+        btn_verfact = new javax.swing.JButton();
+        btn_BuscFact = new javax.swing.JButton();
+        btn_buscarpr = new javax.swing.JButton();
+        btn_listProd = new javax.swing.JButton();
+        btn_cerrarsesi = new javax.swing.JButton();
+        btn_historial = new javax.swing.JButton();
+        btn_editfact = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        btn_acerca = new javax.swing.JButton();
+        btn_salir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("QUESERA 81");
+        jLabel1.setText("QUESERA LA 81");
+
+        jLabel2.setText("BIENVENIDO/A");
+
+        btn_editusu.setText("EDITAR USUARIO");
+        btn_editusu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_editusuActionPerformed(evt);
+            }
+        });
+
+        btn_crearusu.setText("CREAR USUARIO");
+        btn_crearusu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_crearusuActionPerformed(evt);
+            }
+        });
+
+        btn_crearpr.setText("CREAR PRODUCTO");
+        btn_crearpr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_crearprActionPerformed(evt);
+            }
+        });
+
+        btn_editpr.setText("EDITAR PRODUCTO");
+        btn_editpr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_editprActionPerformed(evt);
+            }
+        });
+
+        btn_verfact.setText("VER FACTURAS");
+        btn_verfact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_verfactActionPerformed(evt);
+            }
+        });
+
+        btn_BuscFact.setText("BUSCAR FACTURA");
+        btn_BuscFact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_BuscFactActionPerformed(evt);
+            }
+        });
+
+        btn_buscarpr.setText("BUSCAR PRODUCTO");
+        btn_buscarpr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarprActionPerformed(evt);
+            }
+        });
+
+        btn_listProd.setText("LISTA DE PRODUCTOS");
+        btn_listProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_listProdActionPerformed(evt);
+            }
+        });
+
+        btn_cerrarsesi.setText("CERRAR SESION");
+        btn_cerrarsesi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cerrarsesiActionPerformed(evt);
+            }
+        });
+
+        btn_historial.setText("HISTORIAL");
+        btn_historial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_historialActionPerformed(evt);
+            }
+        });
+
+        btn_editfact.setText("EDITAR FACTURA");
+        btn_editfact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_editfactActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("FACTURAR");
+
+        btn_acerca.setText("ACERCA DE");
+        btn_acerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_acercaActionPerformed(evt);
+            }
+        });
+
+        btn_salir.setText("SALIR");
+        btn_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_salirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(358, 358, 358)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(407, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btn_salir)
+                        .addGap(31, 31, 31)
+                        .addComponent(btn_acerca))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_editusu)
+                            .addComponent(btn_crearusu)
+                            .addComponent(btn_cerrarsesi))
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_editpr)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btn_crearpr)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(61, 61, 61)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_verfact)
+                                    .addComponent(jButton13)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_listProd)
+                                    .addComponent(btn_buscarpr))
+                                .addGap(43, 43, 43)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_editfact)
+                                    .addComponent(btn_historial)
+                                    .addComponent(btn_BuscFact))))))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(607, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_editusu)
+                    .addComponent(btn_crearpr)
+                    .addComponent(jButton13))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_crearusu)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_editpr)
+                        .addComponent(btn_verfact)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_buscarpr)
+                    .addComponent(btn_cerrarsesi)
+                    .addComponent(btn_BuscFact))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_listProd)
+                    .addComponent(btn_editfact))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addComponent(btn_historial)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_acerca)
+                    .addComponent(btn_salir))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_cerrarsesiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cerrarsesiActionPerformed
+        // TODO add your handling code here:
+        Cerrar_sesion cs = new Cerrar_sesion();
+        cs.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_cerrarsesiActionPerformed
+
+    private void btn_historialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_historialActionPerformed
+        historial ad = new historial();
+        ad.setVisible(true);
+        dispose(); 
+    }//GEN-LAST:event_btn_historialActionPerformed
+
+    private void btn_acercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_acercaActionPerformed
+        Acerca_De ac = new Acerca_De();
+        ac.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_acercaActionPerformed
+
+    private void btn_editfactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editfactActionPerformed
+        Edit_Fact f = new Edit_Fact();
+        f.setVisible(true);
+        dispose();
+       
+    }//GEN-LAST:event_btn_editfactActionPerformed
+
+    private void btn_BuscFactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BuscFactActionPerformed
+        // TODO add your handling code here:
+        Buscar_Cont b = new Buscar_Cont();
+        b.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_BuscFactActionPerformed
+
+    private void btn_verfactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verfactActionPerformed
+        // TODO add your handling code here:
+        Contabilidad c = new Contabilidad();
+        c.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_btn_verfactActionPerformed
+
+    private void btn_listProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_listProdActionPerformed
+        // TODO add your handling code here:
+        ListarP lp = new ListarP();
+        lp.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_listProdActionPerformed
+
+    private void btn_buscarprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarprActionPerformed
+        // TODO add your handling code here:
+        Buscar_producto bp = new Buscar_producto();
+        bp.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_buscarprActionPerformed
+
+    private void btn_editprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editprActionPerformed
+        // TODO add your handling code here:
+        Actualizar_producto ap = new Actualizar_producto();
+        ap.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_editprActionPerformed
+
+    private void btn_crearprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearprActionPerformed
+        // TODO add your handling code here:
+        Productos p = new Productos();
+        p.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_crearprActionPerformed
+
+    private void btn_crearusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearusuActionPerformed
+        // TODO add your handling code here:
+        Crear_usuario crearus = new Crear_usuario();
+        crearus.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_crearusuActionPerformed
+
+    private void btn_editusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editusuActionPerformed
+        // TODO add your handling code here:
+        Editar_usuario editus = new Editar_usuario();
+        editus.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_editusuActionPerformed
+
+    private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btn_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,6 +347,21 @@ public class Menu_principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_BuscFact;
+    private javax.swing.JButton btn_acerca;
+    private javax.swing.JButton btn_buscarpr;
+    private javax.swing.JButton btn_cerrarsesi;
+    private javax.swing.JButton btn_crearpr;
+    private javax.swing.JButton btn_crearusu;
+    private javax.swing.JButton btn_editfact;
+    private javax.swing.JButton btn_editpr;
+    private javax.swing.JButton btn_editusu;
+    private javax.swing.JButton btn_historial;
+    private javax.swing.JButton btn_listProd;
+    private javax.swing.JButton btn_salir;
+    private javax.swing.JButton btn_verfact;
+    private javax.swing.JButton jButton13;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
