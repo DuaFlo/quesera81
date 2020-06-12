@@ -179,7 +179,10 @@ public class Productos extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
-        // TODO add your handling code here:
+        Menu_principal Ac = new Menu_principal();
+        Ac.setVisible(true);
+        dispose();
+               
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
     private void btn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverActionPerformed

@@ -107,7 +107,9 @@ public class Buscar_producto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
-    
+    Menu_principal Ac = new Menu_principal();
+    Ac.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
     private void btn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverActionPerformed

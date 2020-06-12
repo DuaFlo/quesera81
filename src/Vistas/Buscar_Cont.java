@@ -124,7 +124,9 @@ public class Buscar_Cont extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
-
+        Menu_principal Aceptar = new Menu_principal();
+        Aceptar.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
     private void btn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverActionPerformed

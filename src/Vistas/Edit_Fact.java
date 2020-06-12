@@ -173,7 +173,10 @@ public class Edit_Fact extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
-        // TODO add your handling code here:
+        Menu_principal guar = new Menu_principal();
+        guar.setVisible(true);
+        dispose();
+            
     }//GEN-LAST:event_btn_guardarActionPerformed
 
     private void txt_ccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ccActionPerformed
