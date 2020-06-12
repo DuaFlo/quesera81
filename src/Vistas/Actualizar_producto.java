@@ -177,6 +177,9 @@ public class Actualizar_producto extends javax.swing.JFrame {
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
         // TODO add your handling code here:
+        Menu_principal ap = new Menu_principal();
+        ap.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
     private void btn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverActionPerformed

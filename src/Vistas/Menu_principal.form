@@ -42,6 +42,17 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btn_listProd" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn_buscarpr" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btn_editfact" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn_historial" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="btn_editpr" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Component id="jLabel1" min="-2" pref="94" max="-2" attributes="0"/>
@@ -52,18 +63,6 @@
                               <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="btn_verfact" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton13" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btn_listProd" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btn_buscarpr" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btn_editfact" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btn_historial" min="-2" max="-2" attributes="0"/>
                                   <Component id="btn_BuscFact" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -85,30 +84,28 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btn_editusu" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btn_crearpr" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton13" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_verfact" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btn_crearusu" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btn_editpr" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn_verfact" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_BuscFact" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btn_buscarpr" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btn_cerrarsesi" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn_BuscFact" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_buscarpr" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_editfact" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btn_listProd" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn_editfact" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btn_listProd" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_historial" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
-              <Component id="btn_historial" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <EmptySpace pref="59" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btn_acerca" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btn_salir" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -216,11 +213,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_editfactActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton13">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="FACTURAR"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btn_acerca">
       <Properties>

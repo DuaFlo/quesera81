@@ -190,6 +190,10 @@ public class Editar_usuario extends javax.swing.JFrame {
 
     private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
         // TODO add your handling code here:
+        Menu_principal eu = new Menu_principal();
+        eu.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_btn_guardarActionPerformed
 
     private void txt_ccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ccActionPerformed
