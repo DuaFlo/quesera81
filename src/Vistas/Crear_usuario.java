@@ -189,7 +189,9 @@ public class Crear_usuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registroActionPerformed
-        // TODO add your handling code here:
+       Menu_principal reg = new Menu_principal();
+       reg.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_registroActionPerformed
 
     private void txt_ccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ccActionPerformed
