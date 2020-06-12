@@ -87,6 +87,7 @@ public class Cerrar_sesion extends javax.swing.JFrame {
         // TODO add your handling code here:
        Login l = new Login();
        l.setVisible(true);
+       dispose();
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
     /**
@@ -120,6 +121,8 @@ public class Cerrar_sesion extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Cerrar_sesion().setVisible(true);
+                
+              
             }
         });
     }
