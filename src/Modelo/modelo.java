@@ -4,6 +4,7 @@ package Modelo;
 import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -32,6 +33,31 @@ public class modelo {
     public Connection getConeccion(){
     
         return con;
+    
+    }
+    public void RegistroUsuario(int id, String nombre, String usuario, String pass, int tipo){
+        
+        try{
+            PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
+            
+            ps = con.prepareStatement("INSERT INTO usuarios (id, nombre, usuario, pass, tipo) VALUES (?, ?, ?, ?, ?);");//que comando se va a ejecutar
+            ps.setString(1, id + "");//se cambian los "?" por datos
+            ps.setString(2, nombre);
+            ps.setString(3, usuario);
+            ps.setString(4, pass);
+            ps.setString(5, tipo + "");// + "" se usa para convertir int a string
+            int respuesta = ps.executeUpdate();//respuesta, se ejecuta el comando
+            if(respuesta > 0){
+                JOptionPane.showMessageDialog(null, "Registro exitoso");
+            }else{
+                JOptionPane.showMessageDialog(null, "Error de registro");
+            
+            }
+               
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+            
+        }
     
     }
 }

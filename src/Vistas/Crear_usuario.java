@@ -5,12 +5,18 @@
  */
 package Vistas;
 
+import Modelo.modelo;
+import static java.lang.System.out;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author JUan JOse Rua
  */
 public class Crear_usuario extends javax.swing.JFrame {
-
+    public boolean ccint = false;
     /**
      * Creates new form Crear_usuario
      */
@@ -80,8 +86,13 @@ public class Crear_usuario extends javax.swing.JFrame {
                 txt_ccActionPerformed(evt);
             }
         });
+        txt_cc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_ccKeyPressed(evt);
+            }
+        });
 
-        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Usuario", "Cajero", "Bodega", " " }));
+        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Usuario", "Bodega" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -189,9 +200,46 @@ public class Crear_usuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registroActionPerformed
-       Menu_principal reg = new Menu_principal();
+        if(txt_cc.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+        if(txt_nom.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+        if(txt_usuario.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+        if(txt_pass.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+        if(txt_pass2.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }//todos los campos están llenoscc
+         if(ccint == false) {
+            JOptionPane.showMessageDialog(null, "Formato de la cédula no es correcto (solo numeros)");
+            return;
+        }
+        if(txt_pass.getText().equals( txt_pass2.getText())){
+            modelo m = new modelo();//comunicación con mySQL
+            int id = Integer.parseInt(txt_cc.getText());  //convertir txt_cc en id int
+            m.RegistroUsuario(id, txt_nom.getText(), txt_usuario.getText(), txt_pass.getText(), cb_tipo.getSelectedIndex());
+
+        }else{
+            JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden");
+
+        }
+            
+            
+            
+        /*Menu_principal reg = new Menu_principal();
        reg.setVisible(true);
-        dispose();
+        dispose();*/
+       
     }//GEN-LAST:event_btn_registroActionPerformed
 
     private void txt_ccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ccActionPerformed
@@ -203,6 +251,18 @@ public class Crear_usuario extends javax.swing.JFrame {
         menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_volverActionPerformed
+
+    private void txt_ccKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_ccKeyPressed
+        try{
+            Integer.parseInt(txt_cc.getText());//pasar cc a entero
+            ccint = true;
+        }catch(NumberFormatException e){
+            ccint = false;
+            
+        }
+        
+        
+    }//GEN-LAST:event_txt_ccKeyPressed
 
     /**
      * @param args the command line arguments
