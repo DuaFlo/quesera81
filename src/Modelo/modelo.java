@@ -36,6 +36,7 @@ public class modelo {
     
     }
     public void RegistroUsuario(int id, String nombre, String usuario, String pass, int tipo){
+       
         
         try{
             PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
@@ -48,6 +49,32 @@ public class modelo {
             ps.setString(5, tipo + "");// + "" se usa para convertir int a string
             int respuesta = ps.executeUpdate();//respuesta, se ejecuta el comando
             if(respuesta > 0){
+                JOptionPane.showMessageDialog(null, "Registro exitoso");
+            }else{
+                JOptionPane.showMessageDialog(null, "Error de registro");
+            
+            }
+               
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+            
+        }
+    
+    }
+    public void Productos(int codigo, String nombre, String marca,int precio){
+       
+        
+        try{
+            PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
+            
+            ps = con.prepareStatement("INSERT INTO productos (nombre, marca, precio) VALUES (?, ?, ?);");//que comando se va a ejecutar
+            ps.setString(1, nombre + "");//se cambian los "?" por datos
+            ps.setString(2, marca);
+            ps.setInt(3, precio );
+
+           
+            int respuesta = ps.executeUpdate();//respuesta, se ejecuta el comando
+            if(respuesta >0 ){
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
             }else{
                 JOptionPane.showMessageDialog(null, "Error de registro");

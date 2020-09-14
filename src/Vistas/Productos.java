@@ -5,12 +5,16 @@
  */
 package Vistas;
 
+import Modelo.modelo;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author JUan JOse Rua
  */
 public class Productos extends javax.swing.JFrame {
-
+    
+public boolean precioint = false;
     /**
      * Creates new form Productos
      */
@@ -179,9 +183,29 @@ public class Productos extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
-        Menu_principal Ac = new Menu_principal();
+     
+        if(txt_nom.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+        if(txt_marca.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+        if(txt_precio.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+       
+         if(precioint != false) {
+            JOptionPane.showMessageDialog(null, "Formato del precio no es correcto (solo numeros)");
+           
+        }
+        
+        
+        /*Menu_principal Ac = new Menu_principal();
         Ac.setVisible(true);
-        dispose();
+        dispose();*/
                
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
