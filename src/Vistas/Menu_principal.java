@@ -11,10 +11,6 @@ public class Menu_principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btn_historial = new javax.swing.JButton();
-        btn_editfact = new javax.swing.JButton();
-        btn_BuscFact = new javax.swing.JButton();
-        btn_verfact = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btn_editusu = new javax.swing.JButton();
@@ -26,34 +22,6 @@ public class Menu_principal extends javax.swing.JFrame {
         btn_cerrarsesi = new javax.swing.JButton();
         btn_acerca = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
-
-        btn_historial.setText("HISTORIAL");
-        btn_historial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_historialActionPerformed(evt);
-            }
-        });
-
-        btn_editfact.setText("EDITAR FACTURA");
-        btn_editfact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_editfactActionPerformed(evt);
-            }
-        });
-
-        btn_BuscFact.setText("BUSCAR FACTURA");
-        btn_BuscFact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_BuscFactActionPerformed(evt);
-            }
-        });
-
-        btn_verfact.setText("VER FACTURAS");
-        btn_verfact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_verfactActionPerformed(evt);
-            }
-        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -131,40 +99,6 @@ public class Menu_principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
-                        .addGap(51, 51, 51)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btn_listProd)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(btn_buscarpr)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(btn_editusu)
-                                                .addComponent(btn_crearusu)
-                                                .addComponent(btn_cerrarsesi))
-                                            .addGap(36, 36, 36)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(btn_editpr)
-                                                .addComponent(btn_crearpr))))
-                                    .addGap(4, 4, 4)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(97, 97, 97)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10)))
-                        .addGap(0, 24, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn_salir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_acerca)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(144, 144, 144))
-=======
                         .addContainerGap()
                         .addComponent(btn_salir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -189,36 +123,17 @@ public class Menu_principal extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> 2436a0490066ed9d47b507f14b15f62629325ef5
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_editusu)
-<<<<<<< HEAD
-                    .addComponent(btn_crearpr))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_crearusu)
-                    .addComponent(btn_editpr))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_cerrarsesi)
-                    .addComponent(btn_buscarpr))
-                .addGap(18, 18, 18)
-                .addComponent(btn_listProd)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_acerca)
-                    .addComponent(btn_salir))
-                .addContainerGap())
-=======
                     .addComponent(btn_nuevopr))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -241,7 +156,6 @@ public class Menu_principal extends javax.swing.JFrame {
                         .addComponent(btn_cerrarsesi)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18))
->>>>>>> 2436a0490066ed9d47b507f14b15f62629325ef5
         );
 
         pack();
