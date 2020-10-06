@@ -5,6 +5,8 @@
  */
 package Vistas;
 
+import Modelo.modelo;
+
 public class Login extends javax.swing.JFrame {
 
  
@@ -141,10 +143,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_cancelarActionPerformed
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        // TODO add your handling code here:
+        int cedula = Integer.parseInt(txt_cc.getText());
+        modelo m = new modelo();//comunicación con mySQL en modelo
+        m.Login(cedula, txt_password.getText());
         Menu_principal mn = new Menu_principal();
         mn.setVisible(true);
-        dispose();
+        dispose(); //cierra la ventana abierta
     }//GEN-LAST:event_btn_entrarActionPerformed
 
     private void txt_passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passActionPerformed

@@ -5,6 +5,7 @@ import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -61,7 +62,7 @@ public class modelo {
         }
     
     }
-    public void Productos(int codigo, String nombre, String marca,int precio){
+    public void RegistroProducto(String nombre, String marca, int precio){
        
         
         try{
@@ -74,12 +75,40 @@ public class modelo {
 
            
             int respuesta = ps.executeUpdate();//respuesta, se ejecuta el comando
-            if(respuesta >0 ){
+            if(respuesta >0){
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
             }else{
                 JOptionPane.showMessageDialog(null, "Error de registro");
             
             }
+               
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+            
+        }
+    
+    }
+    
+    public void Login(int cedula, String contraseña){
+       
+        
+        try{
+            PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
+            
+            ps = con.prepareStatement("SELECT * FROM usuarios WHERE id = ? AND pass = ?;");//Buscar el usuario en MYSQL
+            ps.setString(1, cedula + "");//se cambian los "?" por datos
+            ps.setString(2, contraseña);
+            
+            ResultSet rs;
+            rs = ps.executeQuery();
+            
+            if (rs.next()) {//para saber si existen los datos
+                JOptionPane.showMessageDialog(null, "El usuario si existe");
+            } else {
+                JOptionPane.showMessageDialog(null, "El usuario no existe");
+            }
+           
+           
                
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);

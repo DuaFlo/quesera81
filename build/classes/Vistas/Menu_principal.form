@@ -60,6 +60,7 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -96,14 +97,46 @@
                       <Component id="btn_salir" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btn_acerca" min="-2" max="-2" attributes="0"/>
+=======
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btn_salir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btn_acerca" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btn_crearusu" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_editusu" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_cerrarsesi" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btn_listProd" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_buscarpr" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_editpr" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_nuevopr" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
+>>>>>>> 2436a0490066ed9d47b507f14b15f62629325ef5
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
+<<<<<<< HEAD
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="jLabel2" min="-2" pref="104" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
+=======
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel1" min="-2" pref="94" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" pref="104" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+>>>>>>> 2436a0490066ed9d47b507f14b15f62629325ef5
           </Group>
       </Group>
     </DimensionLayout>
@@ -117,15 +150,32 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btn_editusu" alignment="3" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
                   <Component id="btn_crearpr" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
+                  <Component id="btn_nuevopr" alignment="3" min="-2" max="-2" attributes="0"/>
+>>>>>>> 2436a0490066ed9d47b507f14b15f62629325ef5
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
                   <Component id="btn_crearusu" min="-2" max="-2" attributes="0"/>
                   <Component id="btn_editpr" min="-2" max="-2" attributes="0"/>
+=======
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btn_editpr" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btn_buscarpr" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="btn_crearusu" min="-2" max="-2" attributes="0"/>
+                  </Group>
+>>>>>>> 2436a0490066ed9d47b507f14b15f62629325ef5
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
                   <Component id="btn_cerrarsesi" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="btn_buscarpr" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -137,6 +187,22 @@
                   <Component id="btn_salir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+=======
+                  <Group type="102" attributes="0">
+                      <Component id="btn_listProd" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn_acerca" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_salir" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btn_cerrarsesi" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+>>>>>>> 2436a0490066ed9d47b507f14b15f62629325ef5
           </Group>
       </Group>
     </DimensionLayout>
@@ -168,12 +234,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_crearusuActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btn_crearpr">
+    <Component class="javax.swing.JButton" name="btn_nuevopr">
       <Properties>
-        <Property name="text" type="java.lang.String" value="CREAR PRODUCTO"/>
+        <Property name="text" type="java.lang.String" value="NUEVO PRODUCTO"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_crearprActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_nuevoprActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_editpr">

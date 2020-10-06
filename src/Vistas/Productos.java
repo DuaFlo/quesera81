@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class Productos extends javax.swing.JFrame {
     
-public boolean precioint = false;
+public boolean precioint = false; //Bandera, para verificar si el dato es correcto (true false)
     /**
      * Creates new form Productos
      */
@@ -83,6 +83,11 @@ public boolean precioint = false;
 
         jLabel4.setText("PRECIO UNID.");
 
+        txt_precio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_precioKeyPressed(evt);
+            }
+        });
         jScrollPane4.setViewportView(txt_precio);
 
         btn_aceptar.setText("ACEPTAR");
@@ -197,11 +202,13 @@ public boolean precioint = false;
             return;
         }
        
-         if(precioint != false) {
+         if(precioint == false) {//revisa la Bandera
             JOptionPane.showMessageDialog(null, "Formato del precio no es correcto (solo numeros)");
-           
+           return; // si es false se sale
         }
-        
+         modelo m = new modelo();//comunicación con mySQL en modelo
+            int precio = Integer.parseInt(txt_precio.getText());  //convertir txt_precio en int
+            m.RegistroProducto( txt_nom.getText(), txt_marca.getText(), precio);//activa el metodo dentro de modelo
         
         /*Menu_principal Ac = new Menu_principal();
         Ac.setVisible(true);
@@ -214,6 +221,16 @@ public boolean precioint = false;
         menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_volverActionPerformed
+
+    private void txt_precioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_precioKeyPressed
+      try{
+            Integer.parseInt(txt_precio.getText());//pasar txt_precio a entero
+            precioint = true; //Bandera en True
+        }catch(NumberFormatException e){
+            precioint = false; //Bandera en False, no se convirtió a entero
+            
+        }
+    }//GEN-LAST:event_txt_precioKeyPressed
 
     /**
      * @param args the command line arguments
