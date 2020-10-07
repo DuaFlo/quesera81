@@ -16,7 +16,6 @@ public class Menu_principal extends javax.swing.JFrame {
         btn_editusu = new javax.swing.JButton();
         btn_crearusu = new javax.swing.JButton();
         btn_nuevopr = new javax.swing.JButton();
-        btn_editpr = new javax.swing.JButton();
         btn_buscarpr = new javax.swing.JButton();
         btn_listProd = new javax.swing.JButton();
         btn_cerrarsesi = new javax.swing.JButton();
@@ -47,13 +46,6 @@ public class Menu_principal extends javax.swing.JFrame {
         btn_nuevopr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_nuevoprActionPerformed(evt);
-            }
-        });
-
-        btn_editpr.setText("EDITAR PRODUCTO");
-        btn_editpr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_editprActionPerformed(evt);
             }
         });
 
@@ -113,7 +105,6 @@ public class Menu_principal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_listProd)
                             .addComponent(btn_buscarpr)
-                            .addComponent(btn_editpr)
                             .addComponent(btn_nuevopr))
                         .addGap(0, 21, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -137,14 +128,12 @@ public class Menu_principal extends javax.swing.JFrame {
                     .addComponent(btn_nuevopr))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_editpr)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_buscarpr))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(btn_crearusu)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_crearusu))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_buscarpr)))
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btn_listProd)
@@ -189,13 +178,6 @@ public class Menu_principal extends javax.swing.JFrame {
         dispose(); // Este comando permite cerrar la ventana en la cual se ejecuta la accion
     }//GEN-LAST:event_btn_buscarprActionPerformed
 
-    private void btn_editprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editprActionPerformed
-    // Por medio de este boton, el usuario podra corregir posibles errores a la hora de introducir algunos productos al sistema
-        Actualizar_producto ap = new Actualizar_producto(); // Creacion del objeto para ejeecutar la accion
-        ap.setVisible(true); //Este comando lo que hace es abrir la ventana que tiene guardada la variable en la linea de comando anterior
-        dispose(); // Este comando permite cerrar la ventana en la cual se ejecuta la accion
-    }//GEN-LAST:event_btn_editprActionPerformed
-
     private void btn_nuevoprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nuevoprActionPerformed
     // Por medio de este boton, se ingresara un producto nuevo  
         Productos p = new Productos(); // Creacion del objeto para ejeecutar la accion
@@ -237,7 +219,6 @@ public class Menu_principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_buscarpr;
     private javax.swing.JButton btn_cerrarsesi;
     private javax.swing.JButton btn_crearusu;
-    private javax.swing.JButton btn_editpr;
     private javax.swing.JButton btn_editusu;
     private javax.swing.JButton btn_listProd;
     private javax.swing.JButton btn_nuevopr;

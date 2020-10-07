@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Vistas;
+import Modelo.modelo;
 import Vistas.Login;
 /**
  *
@@ -11,9 +12,7 @@ import Vistas.Login;
  */
 public class Actualizar_producto extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Actualizar_producto
-     */
+   public String codigo;
     public Actualizar_producto() {
         initComponents();
     }
@@ -177,9 +176,9 @@ public class Actualizar_producto extends javax.swing.JFrame {
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
         // TODO add your handling code here:
-        Menu_principal ap = new Menu_principal();
-        ap.setVisible(true);
-        dispose();
+        modelo m = new modelo();//comunicación con mySQL en modelo
+        m.EditarProducto(txt_nom.getText(), txt_marca.getText(), txt_precio.getText(),codigo, txt_stock.getText());
+        
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
     private void btn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverActionPerformed
@@ -187,10 +186,13 @@ public class Actualizar_producto extends javax.swing.JFrame {
         menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_volverActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
+    public void cambiardatos(String nom, String marca, String precio, String bodega){
+        txt_nom.setText(nom);
+        txt_nom.setText(marca);
+        txt_nom.setText(precio);
+        txt_nom.setText(bodega);
+    }
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
