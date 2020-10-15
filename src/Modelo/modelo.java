@@ -91,14 +91,14 @@ public class modelo {
     
     }
     
-    public void Login(int cedula, String contraseña){
+    public boolean Login(int cedula, String contraseña){
        
         
         try{
             PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
             
             ps = con.prepareStatement("SELECT * FROM usuarios WHERE id = ? AND pass = ?;");//Buscar el usuario en MYSQL
-            ps.setString(1, cedula + "");//se cambian los "?" por datos
+            ps.setInt(1, cedula );//se cambian los "?" por datos
             ps.setString(2, contraseña);
             
             ResultSet rs;
@@ -106,17 +106,18 @@ public class modelo {
             
             if (rs.next()) {//para saber si existen los datos
                 JOptionPane.showMessageDialog(null, "El usuario si existe");
+                return true;
             } else {
                 JOptionPane.showMessageDialog(null, "El usuario no existe");
             }
-           
+           return false;
            
                
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
             
         }
-    
+    return false;
     }
     public DefaultTableModel listarproductos(){
         try {
@@ -241,7 +242,7 @@ public class modelo {
         
         try{
             PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
-            //String s = "UPDATE usuarios SET nombre = '" + nombre + "', usuario = '" + usuario + "', pass = '" + pass + "', tipo = " + tipo + " WHERE id = " + codigo + ";";
+            String s = "UPDATE usuarios SET nombre = '" + nombre + "', usuario = '" + usuario + "', pass = '" + pass + "', tipo = " + tipo + " WHERE id = " + codigo + ";";
             JOptionPane.showMessageDialog(null, s);
             ps = con.prepareStatement(s);//que comando se va a ejecutar
             

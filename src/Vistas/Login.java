@@ -6,9 +6,10 @@
 package Vistas;
 
 import Modelo.modelo;
+import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
-
+public boolean cedulaint = false;
  
     public Login() {
         initComponents();
@@ -43,6 +44,11 @@ public class Login extends javax.swing.JFrame {
         txt_cc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_ccActionPerformed(evt);
+            }
+        });
+        txt_cc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_ccKeyPressed(evt);
             }
         });
 
@@ -94,6 +100,11 @@ public class Login extends javax.swing.JFrame {
                 btn_entrarActionPerformed(evt);
             }
         });
+        btn_entrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btn_entrarKeyPressed(evt);
+            }
+        });
 
         btn_cancelar.setText("CANCELAR");
         btn_cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -143,12 +154,32 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_cancelarActionPerformed
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        int cedula = Integer.parseInt(txt_cc.getText());
+         if(txt_cc.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }
+          if(txt_password.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            return;
+        }//todos los campos estan llenos
+            if(cedulaint == false) {
+            JOptionPane.showMessageDialog(null, "Formato de la cédula no es correcto (solo numeros)");
+            return;
+        }
+        
+        
         modelo m = new modelo();//comunicación con mySQL en modelo
-        m.Login(cedula, txt_password.getText());
-        Menu_principal mn = new Menu_principal();
-        mn.setVisible(true);
-        dispose(); //cierra la ventana abierta
+        int id = Integer.parseInt(txt_cc.getText());  //convertir txt_cc en id int
+        if (m.Login(id, txt_password.getText())){
+             Menu_principal mn = new Menu_principal();
+            mn.setVisible(true);
+            dispose();
+            //cierra la ventana abierta
+            
+          
+        
+        }
+       
     }//GEN-LAST:event_btn_entrarActionPerformed
 
     private void txt_passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passActionPerformed
@@ -158,6 +189,19 @@ public class Login extends javax.swing.JFrame {
     private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_passwordActionPerformed
+
+    private void btn_entrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_entrarKeyPressed
+        
+    }//GEN-LAST:event_btn_entrarKeyPressed
+
+    private void txt_ccKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_ccKeyPressed
+  try{
+          Integer.parseInt(txt_cc.getText());//pasar txt_cc a entero
+            cedulaint = true; //Bandera en True
+        }catch(NumberFormatException e){
+            cedulaint = false;
+            
+        }    }//GEN-LAST:event_txt_ccKeyPressed
 
    
     public static void main(String args[]) {
