@@ -19,3 +19,5 @@ git pull
  reset --hard master
  git fetch
  git pull
+
+tenete pollo
