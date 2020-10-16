@@ -38,18 +38,18 @@ public class modelo {
         return con;
     
     }
-    public void RegistroUsuario(int id, String nombre, String usuario, String pass, int tipo){
+    public void RegistroUsuario(int id, String nombre, String usuario, String pass){
        
         
         try{
             PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
             
-            ps = con.prepareStatement("INSERT INTO usuarios (id, nombre, usuario, pass, tipo) VALUES (?, ?, ?, ?, ?);");//que comando se va a ejecutar
+            ps = con.prepareStatement("INSERT INTO usuarios (id, nombre, usuario, pass) VALUES (?, ?, ?, ?);");//que comando se va a ejecutar
             ps.setString(1, id + "");//se cambian los "?" por datos
             ps.setString(2, nombre);
             ps.setString(3, usuario);
             ps.setString(4, pass);
-            ps.setString(5, tipo + "");// + "" se usa para convertir int a string
+           
             int respuesta = ps.executeUpdate();//respuesta, se ejecuta el comando
             if(respuesta > 0){
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
@@ -237,13 +237,14 @@ public class modelo {
         }
      }
      
-     public void EditarUsuario(String nombre, String usuario, String pass, String tipo, String codigo){
+     public void EditarUsuario(String nombre, String usuario, String pass, String codigo){
        
         
         try{
             PreparedStatement ps;  //statement se usa para ejecutar comandos sobre la base de datos
-            String s = "UPDATE usuarios SET nombre = '" + nombre + "', usuario = '" + usuario + "', pass = '" + pass + "', tipo = " + tipo + " WHERE id = " + codigo + ";";
-            JOptionPane.showMessageDialog(null, s);
+            String s = "UPDATE usuarios SET nombre = '" + nombre + "', usuario = '" + usuario + "', pass = '" + pass + "'  WHERE id = " + codigo + ";";
+            
+            //JOptionPane.showMessageDialog(null, s);
             ps = con.prepareStatement(s);//que comando se va a ejecutar
             
 
